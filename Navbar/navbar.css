@@ -1,0 +1,78 @@
+*{
+    padding: 0px;
+    margin: 0px;
+}
+#navbar
+{
+    /* border:  1px solid red ; */
+    display: flex;
+    width: 100%;
+    position: fixed;
+    top: 0px;
+    background-color: white;
+}
+
+#lol1{
+    width: 90%;
+    display: flex;
+    margin: auto;
+    /* border:  1px solid green; */
+}
+#lol{
+    width: 90%;
+}
+#lol>div:nth-child(1){
+    padding-left: 60px;
+    padding-top: 7px;
+}
+#lol>div{
+   margin-left: 100px;
+   margin-bottom: 10px;
+}
+#lol>div>span{
+    padding-right: 20px;
+    cursor: pointer;
+    font: 15px CeraPro-Regular;
+    color: #393939;
+   
+    
+}
+/* #lol>div>input{
+   
+} */
+#lol>div>select+input{
+  text-align: center;
+  width: 100px;
+  margin-left: 20px;
+}
+#lol>div>a{
+   padding-left:40px ;
+}
+#search>input{
+    width: 80%;
+    border-radius: 8px;
+    text-align: center;
+    height: 30px;
+    
+}
+#search>i{
+    /* border: 2px solid black; */
+  padding:6px 9px 4px 8px;
+  background-color:#93b95c;
+  color: white;
+ margin-right: 5px;
+  border-radius: 10px;
+  cursor: pointer;
+
+}
+#search>i+i+i{
+    background-color: rgb(108, 99, 99);
+    color: rgb(235, 225, 218);
+    margin-left: 27px;
+}
+#main{
+    height: 5000px;
+    /* border:  1px solid red; */
+   margin-top: 200px;
+   background-color: rgb(231, 222, 222);
+}
