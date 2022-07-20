@@ -1,0 +1,201 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+body{
+    background-color:  #ffffff;
+}
+
+#sections{
+display: flex;
+margin: auto;
+justify-content: center;
+align-items: center;
+margin-top: 20px;
+}
+
+#sections div{
+    display: flex;
+    text-align: center;
+    padding: 5px 100px;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    color: #a39b84;
+    border: 1px solid rgb(215, 215, 215);
+} 
+#sections div:hover{
+    display: flex;
+    text-align: center;
+    padding: 5px 100px;
+    justify-content: center;
+    align-items: center;
+    color: black;
+    background-color: rgb(232, 232, 232);
+    border-bottom: 5px solid rgb(56, 209, 54);
+} 
+#sections  h2{
+    margin-left: 10px;
+    font-size: 19px;
+    font-weight: 100;
+}
+#sections  h1{
+    font-weight: 100;
+}
+
+#add{
+    display: flex;
+    justify-content: space-between;
+    margin: 50px 60px;
+}
+#add h1{
+    font-size: 16px;
+    font-family: Verdana, Geneva, Tahoma, sans-serifs;
+}
+#add h1 a{
+    color: rgb(243, 29, 100);
+}
+#order{
+    padding: 10px 15px;
+    color: #ffffff;
+    cursor: pointer;
+    background-color: #92be4d;
+    border: 0px;
+    font-size: 15px;
+}
+#details h2{
+    margin-left: 80px;
+    font-size: 17px;
+    font-weight: 100;
+    font-family: Verdana, Geneva, Tahoma, sans-serifs;
+}
+#details p{
+    margin-left: 80px;
+    font-weight: 100;
+    font-size: 9px;
+    font-family: Verdana, Geneva, Tahoma, sans-serifs;
+  
+}
+
+#Detinput{
+    margin-left: 80px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+
+
+#address , #Fname ,#Lname ,#landmark,#pincode,#area,#country,#state,#city,#mobile {
+    display: flex;
+    margin-top: 20px;
+    margin-right: 20px;
+    font-size: 14px;
+    color: #5f5f5e;
+    font-family: Verdana, Geneva, Tahoma, sans-serifs;
+}
+#address , #Fname ,#Lname ,#landmark,#pincode,#area,#country,#state,#city,#mobile p{
+    margin-right: 37px;
+}
+#address input{
+    margin-left: 50px;
+    width: 20.4%;
+    height: 80px;
+    border: 1px solid rgb(204, 200, 196);
+}
+#Fname input{
+    margin-left: 31px;
+    width: 20.4%;
+    height: 30px;
+    border: 1px solid rgb(204, 200, 196);
+}
+#Lname input{
+    margin-left: 31px;
+    width: 20.4%;
+    height: 30px;
+    border: 1px solid rgb(204, 200, 196);
+}
+#landmark input{
+    margin-left: 35px;
+    width: 20.4%;
+    height: 30px;
+    border: 1px solid rgb(204, 200, 196);
+}
+
+#pincode input{
+    margin-left: 50px;
+    width: 20.4%;
+    height: 30px;
+    border: 1px solid rgb(204, 200, 196);
+}
+#area input{
+    margin-left: 72px;
+    width: 20.4%;
+    height: 30px;
+    margin-bottom: 30px;
+    border: 1px solid rgb(204, 200, 196);
+}
+#country input{
+    margin-left: 47px;
+    width: 20.4%;
+    height: 30px;
+    border: 1px solid rgb(204, 200, 196);
+}
+#state input{
+    margin-left: 65px;
+    width: 20.4%;
+    height: 30px;
+    border: 1px solid rgb(204, 200, 196);
+}
+#city input{
+    margin-left: 75px;
+    width: 20.4%;
+    height: 30px;
+    border: 1px solid rgb(204, 200, 196);
+}
+#mobile input{
+    margin-left: -5px;
+    width: 20.4%;
+    height: 30px;
+    border: 1px solid rgb(204, 200, 196);
+}
+#Detiamge {
+    display: flex;
+    margin: auto;
+    justify-content: center;
+    align-items: center;
+}
+#Detiamge img {
+    text-align: center;
+    width: 90%;
+}
+
+hr{
+    margin-bottom: 30px;
+    margin-left: 20%;
+    margin-right: 20%;
+}
+
+#detgift{
+display: flex;
+justify-content: space-between;
+margin: 50px 60px;
+}
+
+#detgift h2{
+    font-size: 16px;
+    font-family: Verdana, Geneva, Tahoma, sans-serifs;
+}
+#detgift h2 a{
+    color: rgb(243, 29, 100);
+}
+
+#detgift-in{
+width: 80%;
+}
+#detgift-in input{
+    margin-top: 20px;
+    width: 40%;
+    font-size: 15px;
+    padding: 10px;
+    height: 70px;
+}
