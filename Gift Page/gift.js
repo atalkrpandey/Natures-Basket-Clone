@@ -29,6 +29,19 @@
       let button=document.createElement("button");
       button.classList.add("Aaddbutton")
       button.innerText="ADD";
+      button.style.cursor="pointer";
+      button.addEventListener("click",function(){
+        let dataarr=JSON.parse(localStorage.getItem("product")) || [];
+        let dataobj={
+          image:ele.image,
+          title:ele.title,
+          price:+ele.price*10,
+          quantity:1
+        }
+      dataarr.push(dataobj);
+        localStorage.setItem("product",JSON.stringify(dataarr))
+        alert("Gift added in your Cart")
+      })
       if(price>1000){
         h31.innerText="Delivered In 90 Minutes"
         h31.classList.add("Aplacedtime")
@@ -76,3 +89,4 @@
       alert("Please fill your query first.")
     }
   })
+  
