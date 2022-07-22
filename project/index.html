@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"> -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+   
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+   
+    
+    <style>
+        *{
+            padding: 0px;
+            margin: 0px;
+        }
+               /* login popup */
+       
+      form{
+         border:  1px solid white ;
+         display: flex;
+            width: 100%;
+            height: 70px;
+            position: relative;
+            display: block;
+            align-items: center;
+            text-align: center;
+           
+            
+          background-color: #ededed;
+      }
+      form>input{
+        text-align: center;
+       margin-top: 15px;
+       height: 25px;
+       margin-left: 20px;
+       border-radius: 10px;
+       box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+       border: 1px solid white;
+        
+      }
+      form>input+button{
+        margin-left: 100px;
+        padding: 6px 10px;
+        border-radius: 5px;
+        border: coral;
+        background-color: #84da0c;
+      }
+      form>input+button+button{
+        float: right;
+        width: 30px;
+        border: none;
+        font-size: xx-large;
+       
+      }
+
+       /* navbar */
+
+        #navbar
+        {
+            /* border:  1px solid red ; */
+            display: flex;
+            width: 100%;
+            position: sticky;
+            top: 0px;
+            background-color: white;
+        }
+  
+
+        #lol1{
+            width: 90%;
+            display: flex;
+            margin: auto;
+            /* border:  1px solid green; */
+        }
+        #lol{
+            width: 90%;
+        }
+        #lol>div:nth-child(1){
+            padding-left: 60px;
+            padding-top: 7px;
+        }
+        #lol>div{
+           margin-left: 100px;
+           margin-bottom: 10px;
+        }
+        #lol>div>span{
+            padding-right: 20px;
+            cursor: pointer;
+            font: 15px CeraPro-Regular;
+            color: #393939;
+           
+            
+        }
+        /* #lol>div>input{
+           
+        } */
+        #lol>div>select+input{
+          text-align: center;
+          width: 100px;
+          margin-left: 20px;
+          
+        }
+        #lol>div>button{
+           
+          margin-left:20px ;
+           padding: 3px 8px;
+           /* background-color: white; */
+           border: 1px solid white;
+        }
+        #lol>div>button:hover{
+           cursor: pointer;
+           border-bottom: 1px solid red;    
+            background-color:  #dfe7d4;
+        }
+        #search>input{
+            width: 80%;
+            border-radius: 8px;
+            text-align: center;
+            height: 30px;
+            border:1px solid rgb(166, 164, 164);
+            
+        }
+        #search>i{
+            /* border: 2px solid black; */
+          padding:6px 9px 4px 8px;
+          background-color:#93b95c;
+          color: white;
+         margin-right: 5px;
+          border-radius: 10px;
+          cursor: pointer;
+     
+        }
+        #search>i+i+i{
+            background-color: rgb(108, 99, 99);
+            color: rgb(235, 225, 218);
+            margin-left: 27px;
+        }
+        #main{
+            height: 5000px;
+            /* border:  1px solid red; */
+           margin-top: 200px;
+           background-color: rgb(231, 222, 222);
+        }
+      
+
+        /* banner */
+
+        #banner{
+            /* border: 1px solid red; */
+            width: 90%;
+            height: 400px;
+            margin: auto;
+            margin-top: 20px;
+            border-radius: 15px;
+        }
+        #banner>img{
+            width: 100%;
+            height: 100%;
+            border-radius: 15px;
+        }
+
+        /* lsideshow */
+
+        .slideshow-container>div>img{
+            width: 100%;
+            height: 100%;
+            border-radius: 15px;
+        }
+        .slideshow-container{
+            /* border: 1px solid red; */
+          
+            width: 90%;
+            margin: auto;
+            margin-top: 20px; 
+        }
+
+
+        /* grid boxes */
+        #grid-boxes{
+            /* border: 1px solid red; */
+            
+            width: 90%;
+            display:  grid;
+            grid-template-columns: repeat(3,1fr);
+            gap: 25px;
+            
+            margin: auto;
+            margin-top: 20px; 
+       
+        }
+        #grid-boxes>div{
+         width: 100%;
+         height: 200px;
+         /* border:  1px solid blue; */
+        }
+        #grid-boxes>div>img{
+            width: 100%;
+            height: 100%;
+            border-radius: 10px;
+        }
+        /* headline */
+        .headline{
+            text-align: center;
+            font-weight: 500;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+        /* boxesa */
+        #boxes{
+           
+            width: 83%;
+            /* border:  1px solid blue; */
+           
+            margin: auto;
+            display: grid;
+            grid-template-columns: repeat(4,1fr);
+            grid-template-rows: repeat(150px);
+            gap: 20px;
+        }
+        #boxes>div{
+            /* border: 1px solid red; */
+            width: 100%;
+    
+        }
+        #boxes>div>img{
+            width: 100%;
+            height: 300px;
+            border-radius: 10px;
+            box-shadow: 9px 18px 12px rgb(209, 164, 122);
+        }
+        #boxes>div>p{
+            padding-top: 5px;
+            font: 15px CeraPro-Regular;
+            color: #393939;
+            width: 100%;
+            text-align: center;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        #boxes>div>h4{
+            font-family:Verdana, Geneva, Tahoma, sans-serif;
+            text-align: center;
+            font-weight: 500;
+            padding-top: 15px;
+        }
+        #boxes>div>button{
+            margin-top: 10px;
+            width: 100%;
+            border: none;
+            font-weight: 400;
+            font-weight: bold;
+            
+            background-color: white;
+            color: #84da0c;
+        }
+      
+     
+
+        
+  
+    </style>
+</head>
+<body>
+    <div id="signupform" >
+        <form action="" id="form1" >
+          <input type="text" placeholder="Enter Mobile OR Email" id="mobileno">
+          <input type="text" placeholder="Create password" id="pswrdenter">
+          <input type="text" placeholder="Re enter password" id="pswrdrenter">
+          <button type="submit">Continue</button>
+          <button type="button"  onclick="closeForm1()">x</button>
+        </form>
+      </div>
+
+    <div class="form-popup" id="myForm">
+        <form action="" id="login">
+          <input type="text" placeholder="Enter Email" id="email">
+          <input type="password" placeholder="Enter Password" id="pass">
+      
+          <button type="submit">Login</button>
+          <button type="button" class="btn cancel" onclick="closeForm1()">x</button>
+        </form>
+      </div>
+  
+
+
+    <div id="navbar">
+        <!-- <span>online Slots availablity</span>
+
+            
+        <span>Freash&Fast</span> -->
+  
+        <div id="lol1">
+            
+            <div id="logo">
+                <img src="https://www.naturesbasket.co.in/Images/logosnew.png?v=2" alt="">
+                
+            </div>
+            <div id="lol">
+             <div>
+                <span>Online Slots Available</span>
+                <span>Freash&Fast</span>
+                <span>Store Locator</span>
+                <span>Contact Us</span>
+                <select name="" id="">
+                    <option value="">Mumbai</option>
+                    <option value="">pune</option>
+                    <option value="">Hyderabad</option>
+                    <option value="">Bangalore</option>
+                </select>
+                <input type="text" placeholder="Enter Pincode">
+                <!-- <a href=""id="myForm" onclick="openForm()" class="open-button">Login</a> -->
+                <button id="myForm" onclick="openForm()">Login</button>
+                <!-- <a href="">Login</a> -->
+                <button onclick="openForm1()">Signup</button>
+             </div>
+             <div id="search">
+                <input onke  type="text" placeholder="Start shopping..." id="query">
+                <i class="fa fa-search" style="height: 20px;">    </i>
+                <i class="fa fa-star-o" style="height:20px;"></i>
+                <i class="fa fa-shopping-cart" style="height:20px"></i>
+             </div>
+        
+            </div>
+           
+        </div>
+
+      
+       
+
+    </div>
+    <div id="banner">
+        <img src='https://gnbdevcdn.s3-ap-southeast-1.amazonaws.com/Marketing/d8cc09f5-5d68-4853-ae9a-233ceabe3acd.jpg' alt="">
+    </div>
+    <div class="slideshow-container">
+
+        <div class="mySlides fade">
+        
+          <img src="https://d1z88p83zuviay.cloudfront.net/BannerImages/f2b41376-0541-4bfa-932f-887339692b60_1320x376.jpg" >
+ 
+        </div>
+        
+        <div class="mySlides fade">
+      
+          <img src="https://d1z88p83zuviay.cloudfront.net/BannerImages/172ece1d-70d5-44d5-a5f4-0d236c1d815a_1320x376.jpg" >
+         
+        </div>
+        
+        <div class="mySlides fade">
+  
+          <img src="https://d1z88p83zuviay.cloudfront.net/BannerImages/0f2301bb-4607-47f9-859c-1c2c21642159_1320x376.jpg" >
+        
+        </div>
+        <div class="mySlides fade">
+        
+            <img src="https://d1z88p83zuviay.cloudfront.net/BannerImages/56d58540-9be6-436e-9046-3a75e7f3928b_1320x376.jpg" >
+          
+          </div>
+          <div class="mySlides fade">
+        
+            <img src="https://d1z88p83zuviay.cloudfront.net/BannerImages/b7641ce5-fd86-485f-bc27-e6c486afc951_1320x376.jpg" >
+          
+          </div>
+          <div class="mySlides fade">
+        
+            <img src="https://d1z88p83zuviay.cloudfront.net/BannerImages/38521139-e3c4-4e13-8cb1-9a3f2adc5fc5_1320x376.jpg" >
+          
+          </div>
+          <div class="mySlides fade">
+        
+            <img src="https://d1z88p83zuviay.cloudfront.net/BannerImages/38521139-e3c4-4e13-8cb1-9a3f2adc5fc5_1320x376.jpg" >
+          
+          </div>
+          <div class="mySlides fade">
+        
+            <img src="https://d1z88p83zuviay.cloudfront.net/BannerImages/95cca699-6c66-4df8-ace2-7effeddecfaa_1320x376.jpg" >
+          
+          </div>
+          
+        </div>
+        <div id="grid-boxes">
+            <div>
+                <img src="https://www.naturesbasket.co.in/Images/NaturesBasketGifting.jpeg?v=7" alt="">
+            </div>
+            <div>
+                <img src="https://www.naturesbasket.co.in/Images/Japanesecuisine-webbox.png?v=10" alt="">
+            </div>
+            <div>
+                <img src="https://www.naturesbasket.co.in/Images/Gluten-free-web%20box%20banner.png?v=15" alt="">
+            </div>
+
+        </div>
+        <h3 class="headline">SHOP BY CATEGORY</h3>
+        <div id="boxes">
+         <div>
+            <img src="https://gnbdevcdn.s3.amazonaws.com/Images/Category/Exoticvegetablesweb.png" alt="">
+            <h4>Exotic Vegetables</h4>
+            <p>Asparagus artichokes</p>
+            <p>Avacadoos Pepppers</p>
+            <p>Brocoil Zucchini</p>
+            <button>View All</button>
+         </div>
+         <div>
+            <img src="https://gnbdevcdn.s3.amazonaws.com/Images/Category/coldcutweb.png" alt="">
+            <h4>Meat, Poultry & Seafood</h4>
+            <p>Chicken Cuts Lollipops Mince</p>
+            <p>Fish Other Seafood</p>
+            <p>Freash Kababs Others</p>
+            <button>View All</button>
+         </div>
+         <div>
+            <img src="https://gnbdevcdn.s3.amazonaws.com/Images/Category/Freshartisinalbreadsweb.png" alt="">
+            <h4>Freash Artisanal Breads</h4>
+            <p>Breadsticks Crostinni Lavache</p>
+            <p>Buns Croissants Bagels</p>
+            <p>Muffins Cakes Brownies</p>
+            <button>View All</button>
+         </div>
+         <div>
+            <img src="https://gnbdevcdn.s3.amazonaws.com/Images/Category/dailyessentialsweb.png" alt="">
+            <h4>Daily Essentials</h4>
+            <p>Snacks & Beverages</p>
+            <p>Breakfast, Dairy & Bakery</p>
+            <p>Staples</p>
+            <button>View All</button>
+         </div>
+        </div>
+        
+        
+
+</body>
+</html>
+<script>
+  
+ 
+   function openForm() {
+    document.getElementById("myForm").style.display ="block"
+  document.getElementById("signupform").style.display = "none";
+  document.documentElement.scrollTop = 0;
+}
+ 
+function closeForm() {
+  document.getElementById("myForm").style.display ="none";
+}   
+document.getElementById("myForm").style.display ="none"
+
+// part 2
+function openForm1() {
+    document.getElementById("myForm").style.display ="none"
+    document.getElementById("signupform").style.display ="block";
+    document.documentElement.scrollTop = 0;
+} 
+
+function closeForm1() {
+    document.getElementById("myForm").style.display ="none";
+    document.getElementById("signupform").style.display ="none";
+  }
+  document.getElementById("signupform").style.display ="none";
+
+ </script>
+<script>
+  // slide show
+let slideIndex = 0;
+showSlides();
+        
+function showSlides() {
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";  
+  }
+  slideIndex++;
+  if (slideIndex > slides.length) {slideIndex = 1}    
+  for (i = 0; i < slides.length; i++) {
+    slides[i].className = slides[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  slides[slideIndex-1].className += " active";
+  setTimeout(showSlides, 2000); // Change image every 2 seconds
+}
+
+</script>
+<script src="./index2.js"></script>
+<!-- <script>
+
+
+
+
+     let logindiv= document.getElementById("f2")
+     logindiv.innerHTML=null
+    document.getElementById("login").addEventListener("click",function(){
+      appendlogin()
+
+    })
+    let appendlogin=()=>{
+    let h1=document.createElement("h1");
+    h1.innerText="hello masai"
+    
+    logindiv.append(h1);
+    }
+</script> -->
