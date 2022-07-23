@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" href="nature-basket.png"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Address</title>
+    <link rel="stylesheet" href="../Address page/address.css">
+</head>
+<style>
+     #sections>div:nth-child(3){
+        border-bottom: 5px solid green;
+    }
+    .popup{
+        width: 480px;
+        background-color: #fff;
+        border-radius:6px;
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translate(-50% , -50%) scale(0.1);
+        text-align: center;
+        padding: 0 30px  30px;
+        color: #333;
+        visibility: hidden;
+        /* transition: transform 0.4 , top 0.4s; */
+    }
+    .open-popup{
+        visibility: visible;
+        top: 50%;
+        transform: translate(-50% , -50%) scale(1);
+    }
+    .popup img{
+        width: 100px;
+        margin-top: -50px;
+        border-radius: 10%;
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    }
+    .popup h2{
+        font-size: 30px;
+        font-weight: 500;
+        margin: 30px 0 10px;
+    }
+    .popup button{
+        width: 100%;
+        margin-top: 50px;
+        padding: 10px 0;
+        background-color: bisque;
+        border: 0px;
+        outline: none;
+        font-size: 18px;
+        border-radius: 5px;
+        cursor: pointer;
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    }
+</style>
+<body>
+
+   
+    
+<div id="sections">
+    <Div>
+        <h1>1</h1>
+        <h2>Login</h2>
+    </Div>
+    <Div>
+        <h1>2</h1>
+        <a href="../Address page/Address.html"><h2>Address Details</h2></a>
+    </Div>
+    <Div>
+        <h1>3</h1>
+        <a href="../Order Page/ordersummary.html"><h2>Order Summaary</h2></a>
+    </Div>
+    <Div>
+        <h1>4</h1>
+        <h2>Payment Options</h2>
+    </Div>
+</div>
+
+<div id="Detiamge">
+    <img src="https://gnbdevcdn.s3-ap-southeast-1.amazonaws.com/Marketing/c254120d-1791-4d93-b745-9da56e02e158.png" alt="">
+
+</div>
+<div id="note">
+    <p><a>NOTE:</a>  Fresh & Fast Delivery service is applicable for select pincodes.</p>
+</div>
+
+
+<div id="add">
+    <h1>Product <a>Details</a> </h1>
+</div>
+
+<div class="Product">
+
+    <p>Product</p>
+    <p>Name</p>
+    <p>Price</p>
+    <p>Sub-Total</p>
+</div>
+
+<div id="cartadd">
+       <!-- Append  Cart Data Here -->
+</div>
+
+<hr>
+
+<div id="detgift">
+
+    <div id="detgift-btn">
+        <h4 id="final-amt"></h4>
+       <a href="../Payment/payment.html"> <button id="order" onclick="openPopup()"> Confirm And Pay</button></a>
+    </div>
+
+    <div class="popup" id="popup">
+        <img src="https://c.tenor.com/xVfFIHxAzW4AAAAC/success.gif" alt="">
+        <h2>Thank you! </h2>
+        <P>Enetr Card Details</P>
+        <button onclick="closePopup()">Submit</button>
+    </div>
+</div>
+
+
+</body>
+</html>
+
+<script src="./order.js"></script>
+
+<script>
+//     let popup = document.getElementById("popup")
+
+//     function openPopup(){
+//    popup.classList.add("open-popup")
+//     }
+//     function closePopup(){
+//    popup.classList.remove("open-popup")
+//     }
+
+</script>
