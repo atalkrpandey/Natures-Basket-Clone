@@ -8,6 +8,12 @@
     <title>Address</title>
     <link rel="stylesheet" href="address.css">
 </head>
+
+<style>
+    #sections>div:nth-child(2){
+        border-bottom: 5px solid green;
+    }
+</style>
 <body>
 
     <div id="Detiamge">
@@ -25,7 +31,7 @@
     </Div>
     <Div>
         <h1>3</h1>
-        <h2>Order Summaary</h2>
+        <a href="../Order Page/ordersummary.html"><h2>Order Summaary</h2></a>
     </Div>
     <Div>
         <h1>4</h1>
@@ -36,7 +42,7 @@
 
 <div id="add">
     <h1>ADDRESS <a>DETAILS</a> </h1>
-    <a href="ordersummary.html"> <button id="order">REVIEVE AND PLACE ORDER</button></a>
+    <a href="../Order Page/ordersummary.html"> <button id="order">REVIEVE AND PLACE ORDER</button></a>
 </div>
 
 <div id="details">
@@ -45,6 +51,8 @@
 </div>
 
 <form>
+<div id="showAdds">
+
 
 <div id="Detinput">
     <div id="Fname">
@@ -87,9 +95,20 @@
     <p>Mobile No*</p>
     <input type="number" id="mob">
    </div>
-       
-  </div>
+
+   <button id="Detinput-btn"> Add Address</button>
+  
+      </div>
+   <div id="addDet">
+
+    <!-- Append address details here -->
+    
+    </div>
+</div>
 </form>
+
+
+
 <hr>
 
 <div id="detgift">
@@ -98,10 +117,12 @@
         <input type="text" placeholder="Enter Your Gift Message">
     </div>
     <div id="detgift-btn">
-       <a href="ordersummary.html"> <button id="order">REVIEVE AND PLACE ORDER</button></a>
+       <a href="../Order Page/ordersummary.html"> <button id="order">REVIEVE AND PLACE ORDER</button></a>
     </div>
 </div>
 
 
 </body>
 </html>
+
+<script src="./address.js"></script>
