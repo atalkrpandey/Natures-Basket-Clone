@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" href="nature-basket.png"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Address</title>
+    <link rel="stylesheet" href="address.css">
+    <link rel="stylesheet" href="../main-footer.css">
+    <link rel="stylesheet" href="../navbar.css">
+</head>
+
+<style>
+    #sections>div:nth-child(2){
+        border-bottom: 5px solid green;
+    }
+</style>
+<body>
+  <div id="navbar"></div>
+    <div id="Detiamge">
+        <img src="https://gnbdevcdn.s3-ap-southeast-1.amazonaws.com/Marketing/c254120d-1791-4d93-b745-9da56e02e158.png" alt="">
+    </div>
+    
+<div id="sections">
+    <Div>
+        <h1>1</h1>
+        <h2>Login</h2>
+    </Div>
+    <Div>
+        <h1>2</h1>
+        <h2>Address Details</h2>
+    </Div>
+    <Div>
+        <h1>3</h1>
+        <a href="../Order Page/ordersummary.html"><h2>Order Summaary</h2></a>
+    </Div>
+    <Div>
+        <h1>4</h1>
+        <h2>Payment Options</h2>
+    </Div>
+</div>
+
+
+<div id="add">
+    <h1>ADDRESS <a>DETAILS</a> </h1>
+    <a href="../Order Page/ordersummary.html"> <button id="order">REVIEVE AND PLACE ORDER</button></a>
+</div>
+
+<div id="details">
+    <h2>Enter Shipping Address</h2>
+    <p>(Fields marked with * are mandatory)</p>
+</div>
+
+<form>
+<div id="showAdds">
+
+
+<div id="Detinput">
+    <div id="Fname">
+        <p>First Name*</p>
+        <input type="text" id="fname">
+    </div >
+    <div id="Lname">
+        <p>Last Name*</p>
+        <input type="text" id="lname">
+    </div>
+    <div id="address">
+        <p>Address*</p>
+        <input type="text" id="adds">
+    </div>
+    <div id="landmark">
+        <p>Landmark*</p>
+        <input type="text" id="land">
+    </div>
+    <div id="pincode">
+        <p>Pincode*</p>
+        <input type="number" id="pin">
+    </div>
+    <div id="area">
+        <p>Area*</p>
+        <input type="text" id="are">
+    </div>
+    <div id="country">
+        <p>Country*</p>
+        <input type="text" id="ctry">
+    </div>
+   <div id="state">
+    <p>State*</p>
+    <input type="text" id="ste">
+   </div>
+   <div id="city">
+    <p>City*</p>
+    <input type="text" id="cty">
+   </div>
+   <div id="mobile">
+    <p>Mobile No*</p>
+    <input type="number" id="mob">
+   </div>
+
+   <button id="Detinput-btn"> Add Address</button>
+  
+      </div>
+   <div id="addDet">
+
+    <!-- Append address details here -->
+    
+    </div>
+</div>
+</form>
+
+
+
+<hr>
+
+<div id="detgift">
+    <div id="detgift-in">
+        <h2>GIFT <a>MESSAGE</a> (Optional)</h2>
+        <input type="text" placeholder="Enter Your Gift Message">
+    </div>
+    <div id="detgift-btn">
+       <a href="../Order Page/ordersummary.html"> <button id="order">REVIEVE AND PLACE ORDER</button></a>
+    </div>
+</div>
+
+<div id="footer"></div>
+</body>
+</html>
+
+<script src="./address.js"></script>
+<script type="module">
+    import {footer} from "../footer-main.js"
+    document.querySelector('#footer').innerHTML=footer();
+    import {navbar} from "../navbar.js"
+    document.querySelector("#navbar").innerHTML=navbar();
+</script>
