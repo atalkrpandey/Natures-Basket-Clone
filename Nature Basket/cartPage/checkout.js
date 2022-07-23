@@ -90,3 +90,7 @@ function addToCart(id){
     }
     return true;
     }
+
+    document.querySelector("#buttcont").addEventListener("click",function(){
+        window.location.href="../project/index.html"
+    })

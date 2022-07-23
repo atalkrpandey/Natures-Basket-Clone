@@ -89,4 +89,8 @@
       alert("Please fill your query first.")
     }
   })
+  document.querySelector("#cart-icon").addEventListener("click",function(){
+    window.location.href=("../cartPage/checkout.html")
+  })
+  
   

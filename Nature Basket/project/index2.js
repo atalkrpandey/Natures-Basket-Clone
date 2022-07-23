@@ -142,19 +142,19 @@ let userdata=JSON.parse(localStorage.getItem("userdata"))||[];
 
 form.addEventListener("submit",function (event){
     event.preventDefault();
-    
+    console.log("hii")
     let data={
         email:form.mobileno.value,
         pass:form.pswrdenter.value,
         repass:form.pswrdrenter.value    
     }
-    if((data.email &&data.pass)==""){
-        alert("feilds are empty")
+    if(form.mobileno.value==""){
+        alert("Feilds are empty")
     }
-    else if(data.pass!==data.repass){
-        alert('password not match')
+    else if(form.pswrdenter.value=="" || form.pswrdrenter.value==""){
+        alert('Fill passward Please!')
     }
-    else if(checkmail(data.email)===true){
+    else{
         userdata.push(data);
         localStorage.setItem("userdata",JSON.stringify(userdata));
         alert("account created succesfully ")
@@ -163,9 +163,7 @@ form.addEventListener("submit",function (event){
        
        
     }
-    else{
-        alert("account already exists")
-    }
+    
     form.reset()
  })
  let checkmail =(email)=>{
@@ -228,7 +226,9 @@ let searchObj = (obj)=>{
       let btn = document.createElement('button');
       btn.innerText = "ADD";
       btn.setAttribute('class','searchBtn')
-      btn.addEventListener('click',()=>{addtoCartBtn(el)})
+      btn.addEventListener('click',function(){
+        addtoCartBtn(el)
+      })
    
       div.append(img,t,p,c,btn)
       cont.append(div);
@@ -236,17 +236,22 @@ let searchObj = (obj)=>{
 
 }
 let count = 0;
-let addtoCartBtn = (e)=>{
-  console.log(array)
-  //  for(let i=0;i<array.length;i++){
-
+let addtoCartBtn = (el)=>{
+  
+  let newarr=[]
+  let obj={
+image:el.image,
+title:el.title,
+price:el.price,
+quantity:1
+  }
       count++;
  
-    console.log(e)
+    newarr.push(obj)
  
    document.getElementById('cart-count-btn').innerText = count;
     localStorage.setItem('cart-count',JSON.stringify(count));
-    localStorage.setItem('product',JSON.stringify(e))
+    localStorage.setItem('product',JSON.stringify(newarr))
 }
 
 
@@ -301,4 +306,7 @@ let  myFunction = ()=> {
   };
   document.querySelector("#gift").addEventListener("click",function(){
     window.location.href="gift.html";
+  })
+  document.querySelector("#cart-icon").addEventListener("click",function(){
+    window.location.href="../cartPage/checkout.html"
   })

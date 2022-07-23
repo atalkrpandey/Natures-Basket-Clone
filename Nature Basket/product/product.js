@@ -63,3 +63,6 @@ cart.push(obj);
 // function carthtml(){
 //     window.location.href="cart.html";
 // }
+document.querySelector("#cart-icon").addEventListener("click",function(){
+  window.location.href=("../cartPage/checkout.html")
+})

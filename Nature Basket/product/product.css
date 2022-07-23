@@ -3,9 +3,11 @@
     margin:0;
     padding: 0px;
     font-size: 13px;
+ 
     
     
 }
+
 body{
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
     margin-top: 20px;
@@ -15,7 +17,13 @@ body{
     margin-left: 30px;
     margin-top: 50px;
 }
-
+#cart-icon{
+   padding: 5px 10px;
+   background-color: aqua;
+    margin-left: 90%;
+    cursor: pointer;
+    border: none;
+}
 #price{
  color:green;
  font-size: 14px;

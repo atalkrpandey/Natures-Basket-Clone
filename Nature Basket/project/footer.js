@@ -1,4 +1,4 @@
-import {footer} from '../footer-part/footer-main.js';
+import {footer} from './footer-part/footer-main.js';
 
 // console.log(footer);
 
@@ -191,6 +191,7 @@ let objData  = [
   }
 
 ]
+  let count=0;
 let getData = ()=>{
   
    let data = objData;
@@ -208,6 +209,7 @@ let getData = ()=>{
   
 
 }
+
 getData()
 
 console.log(objData)
@@ -251,7 +253,43 @@ let arr=newdata;
      let btn = document.createElement('button');
      btn.setAttribute('class','cartAddbtn');
      btn.innerText = "ADD";
-     btn.addEventListener('click',()=>{offersAddtoCart(arr[i])})
+     btn.addEventListener('click',function(){
+    
+      
+      let newarr=JSON.parse(localStorage.getItem("product")) || [];
+      let newdata=newarr.filter(ele => {
+        return ele.title=arr[i].title;
+      });
+      if(newdata.length!==0){
+        
+        for(let i=0;i<newarr.length;i++){
+          if(newarr[i].title==newdata[0].title){
+            newarr[i].quantity++;
+          }
+          localStorage.setItem("product",JSON.stringify(newarr))
+          alert("Item Added to Cart");
+          }
+      }else{
+        let obj={
+        image:arr[i].image,
+        title:arr[i].title,
+        price:arr[i].price,
+        quantity:1
+        }
+    newarr.push(obj);
+        localStorage.setItem("product",JSON.stringify(newarr))
+        alert("Item Added to Cart");
+      }
+          count++;
+     
+       
+     
+       document.getElementById('cart-count-btn').innerText = count;
+        localStorage.setItem('count',JSON.stringify(count));
+      
+
+
+     })
 
       div.append(img,t,p,btn)
       container.append(div)
@@ -297,9 +335,44 @@ let arr=categories;
      let btn = document.createElement('button');
      btn.setAttribute('class','cartAddbtn');
      btn.innerText = "ADD";
-     btn.addEventListener('click',()=>{
-      organicAddtoCart(arr[i])
+     btn.addEventListener('click',function(){
+
+      let newarr=JSON.parse(localStorage.getItem("product")) || [];
+      let newdata=newarr.filter(ele => {
+        return ele.title=arr[i].title;
+      });
+      if(newdata.length!==0){
+        
+        for(let i=0;i<newarr.length;i++){
+          if(newarr[i].title==newdata[0].title){
+            newarr[i].quantity++;
+          }
+          localStorage.setItem("product",JSON.stringify(newarr))
+          alert("Item Added to Cart");
+          }
+      }else{
+        let obj={
+        image:arr[i].image,
+        title:arr[i].title,
+        price:arr[i].price,
+        quantity:1
+        }
+    newarr.push(obj);
+        localStorage.setItem("product",JSON.stringify(newarr))
+        alert("Item Added to Cart");
+      }
+          count++;
+     
+       
+     
+       document.getElementById('cart-count-btn').innerText = count;
+        localStorage.setItem('count',JSON.stringify(count));
+      
+
+
+     
      })
+     
 
       div.append(img,t,p,btn)
       container.append(div)
@@ -351,7 +424,43 @@ let arr=categories;
      let btn = document.createElement('button');
      btn.setAttribute('class','cartAddbtn');
      btn.innerText = "ADD";
-     btn.addEventListener('click',()=>{giftsAddtoCart(arr[i])})
+     btn.addEventListener('click',function(){
+      
+      let newarr=JSON.parse(localStorage.getItem("product")) || [];
+      let newdata=newarr.filter(ele => {
+        return ele.title=arr[i].title;
+      });
+      if(newdata.length!==0){
+        
+        for(let i=0;i<newarr.length;i++){
+          if(newarr[i].title==newdata[0].title){
+            newarr[i].quantity++;
+          }
+          localStorage.setItem("product",JSON.stringify(newarr))
+          alert("Item Added to Cart");
+          }
+      }else{
+        let obj={
+        image:arr[i].image,
+        title:arr[i].title,
+        price:arr[i].price,
+        quantity:1
+        }
+    newarr.push(obj);
+        localStorage.setItem("product",JSON.stringify(newarr))
+        alert("Item Added to Cart");
+      }
+          count++;
+     
+       
+     
+       document.getElementById('cart-count-btn').innerText = count;
+        localStorage.setItem('count',JSON.stringify(count));
+      
+
+
+     
+     })
 
       div.append(img,t,p,btn)
       container.append(div)
@@ -398,7 +507,43 @@ let arr=categories;
      let btn = document.createElement('button');
      btn.setAttribute('class','cartAddbtn');
      btn.innerText = "ADD";
-     btn.addEventListener('click',()=>{healthAddtoCart(arr[i])})
+     btn.addEventListener('click',function(){
+      console.log("hii")
+      let newarr=JSON.parse(localStorage.getItem("product")) || [];
+      let newdata=newarr.filter(ele => {
+        return ele.title=arr[i].title;
+      });
+      if(newdata.length!==0){
+        
+        for(let i=0;i<newarr.length;i++){
+          if(newarr[i].title==newdata[0].title){
+            newarr[i].quantity++;
+          }
+          localStorage.setItem("product",JSON.stringify(newarr))
+          alert("Item Added to Cart");
+          }
+      }else{
+        let obj={
+        image:arr[i].image,
+        title:arr[i].title,
+        price:arr[i].price,
+        quantity:1
+        }
+    newarr.push(obj);
+        localStorage.setItem("product",JSON.stringify(newarr))
+        alert("Item Added to Cart");
+      }
+          count++;
+     
+       
+     
+       document.getElementById('cart-count-btn').innerText = count;
+        localStorage.setItem('count',JSON.stringify(count));
+      
+
+
+     
+     })
    
 
       div.append(img,t,p,btn)
@@ -406,7 +551,7 @@ let arr=categories;
   }
      
 }
-let count =0;
+
 let offersAddtoCart = (el)=>{
 
   count++;
@@ -439,8 +584,16 @@ let offersAddtoCart = (el)=>{
 // document.getElementById("filterGiftsCate-div").style.backgroundColor = "1px solid white";
 // }
 
+document.querySelector("#cart-icon").addEventListener("click",function(){
+  window.location.replace("../cartPage/checkout.html")
+})
 
-
+document.querySelector("#gift").addEventListener("click",function(){
+  window.location.replace("../Gift-Page/gift.html")
+})
+document.querySelector("#offers").addEventListener("click",function(){
+  window.location.replace("../product/items.html")
+})
 
 
 

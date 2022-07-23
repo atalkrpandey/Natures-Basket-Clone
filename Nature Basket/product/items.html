@@ -7,8 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <title>PRODUCT PAGE</title>
-   
-    
+   <link rel="stylesheet" href="../main-footer.css">
+   <link rel="stylesheet" href="../navbar.css">
     <style>
         #heading {
             width: 100%;
@@ -61,10 +61,12 @@
     </style>
 </head>
 <body>
+    <div id="navbar"></div>
         <div id="heading">
                 <h2>TRENDING OFFERS</h2>
             </div>
-        <div id="box2"></div> 
+        <div id="box2"></div>
+        <div id="footer"></div> 
 </body>
 </html>
 <script>
@@ -160,5 +162,11 @@ card.append(div2);
 
 
 
+</script>
+<script type="module">
+    import {navbar} from "../navbar.js" 
+    document.querySelector("#navbar").innerHTML=navbar();
+    import {footer} from "../footer-main.js" 
+    document.querySelector("#footer").innerHTML=footer();
 </script>
 

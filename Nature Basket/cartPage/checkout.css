@@ -87,6 +87,7 @@ hr{
 #proceed{
     display: flex;
     justify-content: flex-end;
+    
 }
 
 .th{
@@ -115,6 +116,7 @@ background-color: #ffffff;
 }
 #buttcont{
     margin-left: 580px;
+    margin-bottom: 60px;
 }
 .h3tags{
     margin: 10px;

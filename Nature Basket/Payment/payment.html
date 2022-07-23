@@ -7,6 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Address</title>
     <link rel="stylesheet" href="../Address page/address.css">
+    <link rel="stylesheet" href="../navbar.css">
+    <link rel="stylesheet" href="../main-footer.css">
 </head>
 <style>
    
@@ -161,7 +163,7 @@
 </style>
 <body>
 
-   
+   <div id="navbar"></div>
     
 <div id="sections">
     <Div>
@@ -214,12 +216,12 @@
     <h5>CVV</h5>
     <input type="number" placeholder="CVV" id="cvv">
     <div id="otp">
-        <input type="number" placeholder="Enter OTP">
+        <input id="otp1" type="number" placeholder="Enter OTP">
 
         <button onclick="getOTP()">Get OTP</button>
     </div>
     
-   <a id="pay" href="submit.html" >PAY</a>
+   <a id="pay">PAY</a>
 </div>
 </div>
 
@@ -237,7 +239,7 @@
     </div>
 </div>
 
-
+<div id="footer"></div>
 </body>
 </html>
 
@@ -255,7 +257,21 @@
 
 
 function getOTP(){
-    alert("Your OTP Number is 5893")
+    alert("OTP sent on your Email")
 }
-
+document.querySelector("#pay").addEventListener("click",function(){
+    let otp=document.querySelector("#otp1").value;
+    console.log(otp)
+    if(otp=="2525"){
+window.location.href="submit.html"
+    }else{
+        alert("Fill correct OTP!")
+    }
+})
+</script>
+<script type="module">
+    import {navbar} from "../navbar.js" 
+    document.querySelector("#navbar").innerHTML=navbar();
+    import {footer} from "../footer-main.js" 
+    document.querySelector("#footer").innerHTML=footer();
 </script>

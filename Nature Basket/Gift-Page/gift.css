@@ -17,6 +17,14 @@
 #Amain{
 display: flex;
 }
+#cart-icon{
+    padding: 5px 10px;
+    background-color: aqua;
+     margin-left: 90%;
+     cursor: pointer;
+     border: none;
+     margin-top: 15px;
+ }
 #Afilter{
     width: 22%;
     border: 1px solid rgb(158, 154, 154);
