@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<style>
+    *{
+        background-color: azure;
+    }
+    .popup{
+        width: 480px;
+        background-color: #fff;
+        border-radius:6px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50% , -50%);
+        text-align: center;
+        padding: 0 30px  30px;
+        color: #333;
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+        /* transition: transform 0.4 , top 0.4s; */
+    }
+   
+    .popup img{
+        width: 150px;
+        margin-top: -50px;
+        border-radius: 10%;
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    }
+    .popup h2{
+        font-size: 30px;
+        font-weight: 500;
+        margin: 30px 0 10px;
+    }
+    .popup button{
+        width: 100%;
+        margin-top: 30px;
+        padding: 10px 0;
+        background-color: rgb(21, 132, 187);
+        border: 0px;
+        outline: none;
+        font-size: 18px;
+        border-radius: 5px;
+        cursor: pointer;
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    }
+
+    .popup button:hover{
+        background-color: rgb(57, 170, 223);
+    }
+</style>
+<body>
+
+    <div>
+        
+    </div>
+    
+    <div class="popup" id="popup">
+        <img src="https://c.tenor.com/xVfFIHxAzW4AAAAC/success.gif" alt="">
+        <h2>Thank you! </h2>
+        <P> Your Payment is Succesfull!</P>
+        <a href="index.html"><button >Shop More</button></a>
+    </div>
+
+</body>
+</html>
