@@ -20,10 +20,14 @@ pric.innerText=Data1.price;
 
 
 var buto=document.querySelector("#add")
-
+let count=0;
 buto.addEventListener("click",function(){
+ 
+
+  count++;
+  console.log(count)
+  document.querySelector("#spanQ").innerText=count;
   buttonfunction(Data1)
-  console.log("lsjl")
 });
 
    
@@ -32,16 +36,29 @@ buto.addEventListener("click",function(){
 //------add to cart part---->
 let cart=JSON.parse(localStorage.getItem("product")) || [];
 function buttonfunction(Data1){
+  let newdata=cart.filter(ele => {
+    return ele.title=Data1.heading;
+  });
+  if(newdata.length!==0){
+    
+    for(let i=0;i<cart.length;i++){
+      if(cart[i].title==newdata[0].title){
+        cart[i].quantity=count;
+      }
+      localStorage.setItem("product",JSON.stringify(cart))
+      alert("Item Added to Cart");
+    }
+  }else{
     let obj={
     image:Data1.image_url1,
     title:Data1.heading,
-    price:Data1.price,
+    price:Data1.box,
     quantity:1
     }
 cart.push(obj);
     localStorage.setItem("product",JSON.stringify(cart))
     alert("Item Added to Cart");
-   
+  }
     }
 // function carthtml(){
 //     window.location.href="cart.html";

@@ -5,8 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gifts Page</title>
     <link rel="stylesheet" href="gift.css">
+    <link rel="stylesheet" href="../main-footer.css">
+    <link rel="stylesheet" href="../navbar.css">
 </head>
 <body>
+    <div id="navbar"></div>
     <div>
         <img id="Atopimage" src="https://gnbdevcdn.s3.amazonaws.com/Images/Category/Web_Sup_1_Gift.png" alt="error">
     </div>
@@ -60,6 +63,14 @@
         </div>
         
     </div>
+    <div id="footer"></div>
 </body>
 </html>
 <script src="gift.js"></script>
+<script type="module">
+    import {footer} from "../footer-main.js"
+    console.log(footer)
+    document.querySelector("#footer").innerHTML=footer();
+    import {navbar} from "../navbar.js"
+    document.querySelector("#navbar").innerHTML=navbar();
+ </script>

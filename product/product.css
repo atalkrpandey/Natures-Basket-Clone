@@ -3,7 +3,7 @@
     margin:0;
     padding: 0px;
     font-size: 13px;
-    font-family: "Lucida Console", "Courier New", monospace;
+    
     
 }
 body{
@@ -20,7 +20,7 @@ body{
  color:green;
  font-size: 14px;
  margin-left: 30px;
- font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+ 
 }
 
 #maindiv{
@@ -96,15 +96,24 @@ body{
     border:solid green;
     color:green;
     font-size: 12px;
-    font-family: "Lucida Console", "Courier New", monospace;
+    
 }
 #add{
     font-size: 13px;
-    font-family: "Lucida Console", "Courier New", monospace;
+   
 }
  .colors{
     color: #000;
     background: #FFF;
     border: 1px solid #c2bfbf;
+}
+#Quantity{
+    margin-top: 20px;
+    width: 100px;
+    height: 30px;
+    background-color: greenyellow;
+    box-sizing: border-box;
+    padding: 7px;
+    margin-left: 30px;
 }
 
