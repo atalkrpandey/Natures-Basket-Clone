@@ -42,7 +42,7 @@
         localStorage.setItem("product",JSON.stringify(dataarr))
         alert("Gift added in your Cart")
       })
-      if(price>1000){
+      if(price>0){
         h31.innerText="Delivered In 90 Minutes"
         h31.classList.add("Aplacedtime")
         img.src="https://d1z88p83zuviay.cloudfront.net/ProductVariantThumbnailImages/5179afc6-856c-428c-8ff7-41ddcce41710_425x425.jpg"

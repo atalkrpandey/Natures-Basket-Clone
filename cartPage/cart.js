@@ -2,7 +2,7 @@
 
 let contianer = document.getElementById("cartadd")
 let cartLSG = JSON.parse(localStorage.getItem("product")) 
-
+document.querySelector("#Item").innerText=cartLSG.length;
 
 let appendData=(cartLS)=>{
     document.querySelector("#cartadd").innerHTML=null;
@@ -37,85 +37,63 @@ let appendData=(cartLS)=>{
 
       let btn1 = document.createElement("button")
       btn1.innerText = "-"
+      btn1.addEventListener("click",function(){
+        if(ele.quantity==0){
+          alert("Worng Credentials")
+        }else{
+            for(let i=0;i<cartLSG.length;i++){
+                if(cartLSG[i].title==ele.title){
+                    cartLSG[i].quantity--;
+                }
+            }
+            localStorage.setItem("product",JSON.stringify(cartLSG))
+            window.location.reload();
+        }
+        
+      })
       btn1.setAttribute("id" , "btnDec")
       
       let total = document.createElement("h3")
-      total.innerText = `${price.toFixed(2)}`
+      total.innerText = `${(ele.price*ele.quantity).toFixed(2)}`
       total.setAttribute("id" , "total")
 
       let btn2 = document.createElement("button")
-      btn2.innerText = "1"
+      btn2.innerText = ele.quantity;
       btn2.setAttribute("id" , "btnDisp")
 
       let btn3 = document.createElement("button")
       btn3.innerText = "+"
       btn3.setAttribute("id" , "btnInc")
-        
+       btn3.addEventListener("click",function(){
+        for(let i=0;i<cartLSG.length;i++){
+            if(cartLSG[i].title==ele.title){
+                cartLSG[i].quantity++;
+            }
+        }
+        localStorage.setItem("product",JSON.stringify(cartLSG))
+        window.location.reload();
+       }) 
       div.append(img,td,span,btn1,btn2,btn3,total);
       contianer.append(div);
     });
   }
   appendData(cartLS)
 
-
-
-
-  counter = localStorage.getItem("localCounter") || 1;
-  document.querySelector("#btnDisp").innerText = counter;
-  
-  document.querySelector("#btnInc").addEventListener("click", incFunc);
-  function incFunc(){
-      counter++;
-      document.querySelector("#btnDisp").innerText = counter;
-      localStorage.setItem("localCounter", counter);
-      let amount =  (document.querySelector(".Aprice").innerText);
-      let amount_new = 0;
-      
-      if (amount.includes(",")){
-          let amount_arr = amount.split(',');
-          amount_new = amount_arr[0] + amount_arr[1];
-      }else{
-          amount_new = amount;
-      }
-      
-      console.log(amount_new);
-      document.getElementById("total").innerText = `${amount_new * counter}`;
-      document.getElementById("totalamt").innerText = `₹ ${amount_new * counter}`;
+ 
+  let sum=0;
+  for(let i=0;i<cartLSG.length;i++){
+  sum+=cartLSG[i].price*cartLSG[i].quantity;
   }
-
-  document.querySelector("#btnDec").addEventListener("click", decFunc);
-  function decFunc(){
-      counter--;
-      document.querySelector("#btnDisp").innerText = counter;
-      localStorage.setItem("localCounter", counter);
-      let amount =  (document.querySelector(".Aprice").innerText);
-      let amount_new = 0;
-      if (amount.includes(",")){
-          let amount_arr = amount.split(',');
-          amount_new = amount_arr[0] + amount_arr[1];
-      }else{
-          amount_new = amount;
-      }
-      console.log(amount_new);
-      document.getElementById("total").innerText = `${amount_new * counter}`;
-      document.getElementById("totalamt").innerText = `₹ ${amount_new * counter}`;
-  }
+  document.querySelector("#totalamt").innerText=sum;
 
 
-  function total(){
 
     let total = document.getElementById("totalamt")
 
-    cartLS.forEach(ele => {
-        let h2 = document.createElement("p")
-        h2.innerText = `₹.${ele.price}`
-        h2.style.fontFamily = "Verdana, Geneva, Tahoma, sans-serif"
-
-         total.append(h2)
-    });
+   
    
 
-  }
+  
 
-  total()
+  
 

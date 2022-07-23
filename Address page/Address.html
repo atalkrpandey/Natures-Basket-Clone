@@ -7,6 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Address</title>
     <link rel="stylesheet" href="address.css">
+    <link rel="stylesheet" href="../main-footer.css">
+    <link rel="stylesheet" href="../navbar.css">
 </head>
 
 <style>
@@ -15,7 +17,7 @@
     }
 </style>
 <body>
-
+  <div id="navbar"></div>
     <div id="Detiamge">
         <img src="https://gnbdevcdn.s3-ap-southeast-1.amazonaws.com/Marketing/c254120d-1791-4d93-b745-9da56e02e158.png" alt="">
     </div>
@@ -121,8 +123,14 @@
     </div>
 </div>
 
-
+<div id="footer"></div>
 </body>
 </html>
 
 <script src="./address.js"></script>
+<script type="module">
+    import {footer} from "../footer-main.js"
+    document.querySelector('#footer').innerHTML=footer();
+    import {navbar} from "../navbar.js"
+    document.querySelector("#navbar").innerHTML=navbar();
+</script>

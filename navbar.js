@@ -19,15 +19,9 @@ function navbar(){
                 <option value="">Bangalore</option>
             </select>
             <input type="text" placeholder="Enter Pincode">
-           <button>Login</button>
-           <button>Signup</button>
+          
          </div>
-         <div id="search">
-            <input type="text" placeholder="Start shopping...">
-            <i class="fa fa-search" style="height: 20px;">    </i>
-            <i class="fa fa-star-o" style="height:20px;"></i>
-            <i class="fa fa-shopping-cart" style="height:20px"></i>
-         </div>
+        
     
         </div>
     </div>

@@ -5,9 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <link rel="stylesheet" href="checkout.css" />
+    <link rel="stylesheet" href="../main-footer.css">
+    <link rel="stylesheet" href="../navbar.css">
   </head>
   <body>
+    <div id="navbar"></div>
     <div id="main">
+      
       <div id="cartimg">
         <img
           src="https://gnbdevcdn.s3-ap-southeast-1.amazonaws.com/Marketing/websitecart.png" alt=""/>
@@ -76,12 +80,12 @@
             <div id="box12">
              <div class="bos13" id="total"> 
                <div>
-                  <h3  class="h3tags">Subtotal</h3>
+                  <h3  class="h3tags">Total</h3>
                   <!-- <h3 class="h3tags" >Delivery Charges</h3> -->
                 </div>  
                 <div>
                     <h2 id="totalamt">
-
+                      00
                     </h2>
                      
                 </div>
@@ -107,7 +111,14 @@
       <h1 id="extrahed">PERSONALIZED BEST SELLERS</h1>
       <div id="appenddiv"></div>
     </div>
+    <div id="footer"></div>
   </body>
 </html>
 <script src="checkout.js"></script>
 <script src="./cart.js"></script>
+<script type="module">
+  import {navbar} from "../navbar.js"
+  document.querySelector('#navbar').innerHTML=navbar();
+  import {footer} from "../footer-main.js"
+  document.querySelector("#footer").innerHTML=footer();
+</script>

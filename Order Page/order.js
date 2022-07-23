@@ -28,12 +28,13 @@ let appendData=(cartLS)=>{
       span.style.marginLeft = "12%"
       span.style.border = "0px"
       span.style.display = "flex"
-      span.style.justifyContent = "center"
+      
       span.style.alignItems = "center"
+      span.style.textAlign="center"
 
-      let price= +(ele.price)*1;
-      price.innerText = ele.price
-      span.innerText= price;
+      let price= (ele.price)*ele.quantity;
+     
+      span.innerText= ele.quantity;
 
     
       
@@ -54,17 +55,16 @@ let appendData=(cartLS)=>{
   function totalAmt(){
 
     let total = document.getElementById("final-amt")
-  
+    let sum=0;
+    for(let i=0;i<cartLS.length;i++){
+    sum+=cartLS[i].price*cartLS[i].quantity;
+    }
+    let h2 = document.createElement("p")
+    h2.innerText = `Payable Amount :-  ₹ ${sum}`
+    h2.style.fontFamily = "Verdana, Geneva, Tahoma, sans-serif"
 
-    cartLS.forEach(ele => {
- 
-
-        let h2 = document.createElement("p")
-        h2.innerText = `Payable Amount :-  ₹ ${ele.price}`
-        h2.style.fontFamily = "Verdana, Geneva, Tahoma, sans-serif"
-
-         total.append(h2)
-    });
+     total.append(h2)
+   
    
 
   }

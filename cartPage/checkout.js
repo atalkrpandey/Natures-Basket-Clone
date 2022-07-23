@@ -3,25 +3,29 @@ let data=[
         id : 1,
         image:"https://d1z88p83zuviay.cloudfront.net/ProductVariantThumbnailImages/b39a7966-b0fe-485d-8cec-39d85c570a8f_425x425.jpg",
         title: "REAL GOOD CHICKEN CURRY CUT 500G",
-        price:175
+        price:175,
+        quantity:1,
     } ,
     {
         id:2,
         image:"https://d1z88p83zuviay.cloudfront.net/ProductVariantThumbnailImages/863d1720-c563-449d-85fb-a85a699fc54d_425x425.jpg",
         title: " REAL GOOD CHICKEN BREAST BONELE",
-        price:190
+        price:190,
+        quantity:1,
     } ,
     {
         id : 3,
         image:"https://d1z88p83zuviay.cloudfront.net/ProductVariantThumbnailImages/5f0bf801-bc90-4715-acaf-b980a919f9aa_425x425.jpg",
         title: "ZORABIAN CHICKEN DRUMSTICK",
-        price:265
+        price:265,
+        quantity:1,
     } ,
     {
         id :4,
         image:"https://d1z88p83zuviay.cloudfront.net/ProductVariantThumbnailImages/7fb83bef-4c1c-4f81-96e6-44c4d3eac077_425x425.jpg",
         title: "Apple Royal Gala - New Zealand",
-        price:199
+        price:199,
+        quantity:1,
     } 
     
 ]
