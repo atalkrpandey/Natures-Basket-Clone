@@ -1,0 +1,119 @@
+#smart{
+
+    margin:0;
+    padding: 0px;
+    font-size: 13px;
+    
+    
+}
+body{
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    margin-top: 20px;
+    height: 500px;
+}
+.margintopp,.head,.pointing{
+    margin-left: 30px;
+    margin-top: 50px;
+}
+
+#price{
+ color:green;
+ font-size: 14px;
+ margin-left: 30px;
+ 
+}
+
+#maindiv{
+    width: 100%;
+    margin: auto;
+    display: flex;
+}
+#left-half{
+    width: 40%;
+    display:flex;
+    gap: 5px;
+    height: 500px;
+    overflow: hidden;
+    overflow-y: scroll;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+
+}
+#left-half::-webkit-scrollbar{
+    display: none;
+}
+.pointing{
+    cursor: pointer;
+}
+#left-half>div>img
+{
+    width: 100%;
+}
+#right-half{
+    width: 60%;
+    height: 500px;
+    margin-left:30px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+@media all and (min-width:150px) and (max-width:1200px){
+
+    #maindiv{
+        width: 1200px;
+        margin: auto;
+        display: flex;
+    }
+     #right-half{
+        width: 400px;
+        height: 600px;
+        margin-left:30px;
+        margin: auto;
+    }
+    #left-half{
+        width: 600px;
+        display: flex;
+        gap: 5px;
+        height: 500px;
+        overflow: hidden;
+        overflow-y: scroll;
+        margin: auto;
+    
+    }
+}
+
+.margintopp{
+    margin-top: 22px;
+}
+
+.clicker{
+    background: rgb(17, 235, 17);
+    border-color:rgb(17, 235, 17);
+    text-align: center;
+    line-height: 30px;
+    border: none;
+    color: white;
+    width: 100px;
+}
+#notify{
+    border:solid green;
+    color:green;
+    font-size: 12px;
+    
+}
+#add{
+    font-size: 13px;
+   
+}
+ .colors{
+    color: #000;
+    background: #FFF;
+    border: 1px solid #c2bfbf;
+}
+#Quantity{
+    margin-top: 20px;
+    width: 100px;
+    height: 30px;
+    background-color: greenyellow;
+    box-sizing: border-box;
+    padding: 7px;
+    margin-left: 30px;
+}
+

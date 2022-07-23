@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-at="page-title">Nature's Bucket</title>
+   
+    <link rel="stylesheet" href="product.css">
+    <link rel="stylesheet" href="../navbar.css">
+    <link rel="stylesheet" href="../main-footer.css">
+   
+</head>
+ <body >
+    <div id="navbar"></div>
+<div>
+   
+        <div id="smart">
+
+        <div id="maindiv">
+            <div id="left-half" >
+              <div id="img1"></div>  
+            </div>  
+       
+                  
+            <div id="right-half">
+                    <div>
+                        <div id="head" class="head"></div>
+                        <div id="price" class="bolder margintopp"></div>
+                        <div id = "prdct" class="margintopp line"></div>
+                        <div  id="notify" class="margintopp fonts clicker colors pointing" >NOTIFY ME</div>
+                        <div id="Quantity">Quantity:-<span id="spanQ">0</span></div>
+                        <div id="add" class="margintopp clicker pointing fonts" >Add To Bag</div>
+                       
+                        <div class="pointing fonts" style="font-weight:bold; margin-top: 10px; text-decoration: underline;">FREE express international delivery and EASY Returns</div>
+                        <br> 
+                    </div>
+                    
+                    </div>
+    </div>
+    <br>
+   <div id="footer"></div>
+</body>
+</html>
+<script src="product.js"></script>
+<script type="module">
+    import {navbar} from "../navbar.js"
+    document.querySelector("#navbar").innerHTML=navbar();
+    import {footer} from "../footer-main.js"
+    document.querySelector("#footer").innerHTML=footer();
+</script>
+ 
