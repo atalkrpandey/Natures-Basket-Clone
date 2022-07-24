@@ -790,7 +790,7 @@
     #85bc3c;
    
   }
-  
+
   .dropdown1 {
     position: relative;
     display: inline-block;
@@ -901,7 +901,7 @@
                 <!-- <a href=""id="myForm" onclick="openForm()" class="open-button">Login</a> -->
                 <button id="myForm" onclick="openForm()">Login</button>
                 <!-- <a href="">Login</a> -->
-                <button onclick="openForm1()">Signup</button>
+                <button id="singup" onclick="openForm1()">Signup</button>
              </div>
              <div id="search">
                 <input onke  type="text" placeholder="Start shopping..." id="query">
@@ -1177,7 +1177,63 @@ function showSlides() {
   slides[slideIndex-1].className += " active";
   setTimeout(showSlides, 2000); // Change image every 2 seconds
 }
+let form=document.getElementById("form1");
+let userdata=JSON.parse(localStorage.getItem("userdata"))||[];
 
+form.addEventListener("submit",function (event){
+    event.preventDefault();
+    console.log("hii")
+    let data={
+        email:form.mobileno.value,
+        pass:form.pswrdenter.value,
+        repass:form.pswrdrenter.value    
+    }
+    if(form.mobileno.value==""){
+        alert("Feilds are empty")
+    }
+    else if(form.pswrdenter.value=="" || form.pswrdrenter.value==""){
+        alert('Fill passward Please!')
+    }
+    else{
+        userdata.push(data);
+        localStorage.setItem("userdata",JSON.stringify(userdata));
+        alert("account created succesfully ")
+       
+      
+    }
+    
+    form.reset()
+ })
+ let myform=document.getElementById("myForm");
+
+ let checkmail =()=>{
+  event.preventDefault()
+  console.log("hii")
+  let users=JSON.parse(localStorage.getItem("userdata"))||[]
+  console.log(users)
+  let email=document.querySelector("#email").value;
+  let pass=document.querySelector("#pass").value;
+    let filterd=users.filter (function (elem){
+        return elem.email===email && elem.pass==pass;
+    })
+    if(filterd.length>0){
+        let obj={
+          email:email,
+          status:true
+        }
+        
+        localStorage.setItem("status",JSON.stringify(obj))
+        alert("Log In Successful")
+    }else{
+      obj={
+        status:false
+      }
+      localStorage.setItem("status",JSON.stringify(obj))
+
+        alert("Worng Credentials !")
+    }
+ }
+ myform.addEventListener("submit",checkmail)
 </script>
 <script src="../index2.js" type="module"></script>
 

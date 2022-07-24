@@ -137,45 +137,8 @@ let  categories =
    },
 ]
 
-let form=document.getElementById("form1");
-let userdata=JSON.parse(localStorage.getItem("userdata"))||[];
 
-form.addEventListener("submit",function (event){
-    event.preventDefault();
-    console.log("hii")
-    let data={
-        email:form.mobileno.value,
-        pass:form.pswrdenter.value,
-        repass:form.pswrdrenter.value    
-    }
-    if(form.mobileno.value==""){
-        alert("Feilds are empty")
-    }
-    else if(form.pswrdenter.value=="" || form.pswrdrenter.value==""){
-        alert('Fill passward Please!')
-    }
-    else{
-        userdata.push(data);
-        localStorage.setItem("userdata",JSON.stringify(userdata));
-        alert("account created succesfully ")
-       
-       
-       
-       
-    }
-    
-    form.reset()
- })
- let checkmail =(email)=>{
-    let filterd=userdata.filter (function (elem){
-        return email===elem.email;
-    })
-    if(filterd.length>0){
-        return false;
-    }else{
-        return true;
-    }
- }
+ 
 
  document.getElementById('query').addEventListener('input',()=>{objData(categories)});
 
